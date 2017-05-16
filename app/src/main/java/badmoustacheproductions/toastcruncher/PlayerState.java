@@ -1,9 +1,8 @@
 package badmoustacheproductions.toastcruncher;
-
 import android.graphics.PointF;
 
 /**
- * Created by doelb on 2017-05-01.
+ * Created by LJBFe on 2017-05-01.
  */
 
 public class PlayerState {
@@ -13,52 +12,30 @@ public class PlayerState {
     private float restartX;
     private float restartY;
 
-    PlayerState(){
+    PlayerState() {
         lives = 3;
         mgFireRate = 1;
         numCredits = 0;
     }
 
-    public void saveLocation(PointF location){
+    public void saveLocation(PointF location) {
+        // The location saves each time the player teleports
         restartX = location.x;
         restartY = location.y;
     }
 
-    public PointF loadLocation(){
+    public PointF loadLocation() {
+        // Used every time the player loses a life
         return new PointF(restartX, restartY);
     }
 
-    public int getLives(){
-        return lives;
-    }
-
-    public int getFireRate(){
-        return mgFireRate;
-    }
-
-    public void increaseFireRate(){
-        mgFireRate += 2;
-    }
-
-    public void gotCredit(){
-        numCredits++;
-    }
-
-    public void loseLife(){
-        lives--;
-    }
-
-    public void addLife(){
-        lives++;
-    }
-
-    public void resetLives(){
-        lives = 3;
-    }
-
-    public void resetCredits(){
-        numCredits = 0;
-    }
-
-
+    public int getLives() { return lives; }
+    public int getMgFireRate() { return mgFireRate; }
+    public void increaseFireRate() { mgFireRate += 2; }
+    public void gotCredits() { numCredits++; }
+    public int getCredits () { return numCredits; }
+    public void loseLife() { lives--; }
+    public void addLife() { lives++; }
+    public void resetLives() { lives = 3; }
+    public void resetCredits() { numCredits = 0; }
 }
