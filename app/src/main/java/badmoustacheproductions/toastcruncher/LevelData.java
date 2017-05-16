@@ -1,29 +1,28 @@
 package badmoustacheproductions.toastcruncher;
 
-
 import java.util.ArrayList;
 
 /**
- * Created by doelb on 2017-04-24.
+ * Created by LJBFe on 2017-04-24.
  */
 
 public class LevelData {
-
     ArrayList<String> tiles;
+    ArrayList<BackgroundData> backgroundDataList;
 
-    //this will evolve
+    // This will evolve
 
-    //Tile types
+    // Tile types
     // . = no tile
     // 1 = grass
-    // 2 = snow
-    // 3 = brick
-    // 4 = coal
+    // 2 = Snow
+    // 3 = Brick
+    // 4 = Coal
     // 5 = Concrete
     // 6 = Scorched
     // 7 = Stone
 
-    // Active objects
+    // Active Objects
     // g = guard
     // d = drone
     // t = teleport
@@ -32,13 +31,14 @@ public class LevelData {
     // f = fire
     // e = extra life
 
-    // Inactive objects
-    // w = tree
+    // Inactive Objects
+    // x = tree
     // x = tree2 (snowy)
-    // l = lamppost
+    // l - lamppost
     // r = stalactite
-    // s = stalacmite
-    // m = minecart
+    // s = stalagmite
+    // m = mine cart
     // z = boulders
+
 
 }
