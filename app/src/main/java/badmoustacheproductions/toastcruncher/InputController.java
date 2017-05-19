@@ -28,26 +28,33 @@ public class InputController {
                 screenHeight - buttonHeight - buttonPadding,
                 buttonWidth,
                 screenHeight - buttonPadding);
+        left.buttontype = 'l';
 
         right.rect = new Rect(buttonWidth + buttonPadding,
                 screenHeight - buttonHeight - buttonPadding,
                 buttonWidth + buttonPadding + buttonWidth,
                 screenHeight - buttonPadding);
+        right.buttontype = 'r';
 
         jump.rect = new Rect(screenWidth - buttonWidth - buttonPadding,
                 screenHeight - buttonHeight - buttonPadding - buttonHeight - buttonPadding,
                 screenWidth - buttonPadding,
                 screenHeight - buttonPadding - buttonHeight - buttonPadding);
+        jump.buttontype = 'j';
 
         shoot.rect = new Rect(screenWidth - buttonWidth - buttonPadding,
                 screenHeight - buttonHeight - buttonPadding,
                 screenWidth - buttonPadding,
                 screenHeight - buttonPadding);
+        shoot.buttontype = 's';
 
         pause.rect = new Rect(screenWidth - buttonPadding - buttonWidth,
                 buttonPadding,
                 screenWidth - buttonPadding,
                 buttonPadding + buttonHeight);
+        pause.buttontype = 'p';
+
+
     }
 
     public ArrayList getButtons() {
