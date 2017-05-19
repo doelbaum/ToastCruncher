@@ -322,11 +322,11 @@ public class PlatformView extends SurfaceView implements Runnable{
 
             // Draw Buttons
             paint.setColor(Color.argb(80, 255, 255, 255));
-            ArrayList<Rect> buttonsToDraw;
+            ArrayList<Button> buttonsToDraw;
             buttonsToDraw = ic.getButtons();
 
-            for(Rect rect : buttonsToDraw) {
-                RectF rf = new RectF(rect.left, rect.top, rect.right, rect.bottom);
+            for(Button button : buttonsToDraw) {
+                RectF rf = new RectF(button.rect.left, button.rect.top, button.rect.right, button.rect.bottom);
                 canvas.drawRoundRect(rf, 15f, 15f, paint);
             }
 
