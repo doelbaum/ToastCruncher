@@ -41,8 +41,8 @@ public class PlatformView extends SurfaceView implements Runnable{
     private Viewport vp;
     InputController ic;
     SoundManager sm;
-    private PlayerState ps;
 
+    private PlayerState ps;
     PlatformView(Context context, int screenWidth, int screenHeight) {
         super(context);
         this.context = context;
@@ -64,7 +64,7 @@ public class PlatformView extends SurfaceView implements Runnable{
         lm = null;
         lm = new LevelManager(context, vp.getPixelsPerMeterX(), vp.getScreenWidth(), ic, level, px, py);
 
-        ic = new InputController(vp.getScreenWidth(), vp.getScreenHeight());
+        ic = new InputController(vp.getScreenWidth(), vp.getScreenHeight(), context);
 
         vp.setWorldCenter(lm.gameObjects.get(lm.playerIndex).getWorldLocation().x, lm.gameObjects.get(lm.playerIndex).getWorldLocation().y);
 
@@ -326,8 +326,9 @@ public class PlatformView extends SurfaceView implements Runnable{
             buttonsToDraw = ic.getButtons();
 
             for(Button button : buttonsToDraw) {
-                RectF rf = new RectF(button.rect.left, button.rect.top, button.rect.right, button.rect.bottom);
-                canvas.drawRoundRect(rf, 15f, 15f, paint);
+                //RectF rf = new RectF(button.rect.left, button.rect.top, button.rect.right, button.rect.bottom);
+                //canvas.drawRoundRect(rf, 15f, 15f, paint);
+                canvas.drawBitmap(button.bitmap, null, button.rect, null);
             }
 
             // Draw paused text
