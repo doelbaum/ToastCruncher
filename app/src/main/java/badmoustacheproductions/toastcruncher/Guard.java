@@ -17,7 +17,7 @@ public class Guard extends GameObject {
     Guard(Context context, float worldStartX, float worldStartY, char type, int pixelfPerMetre) {
         final int ANIMATION_FPS = 8;
         final int ANIMATION_FRAME_COUNT = 5;
-        final String BITMAP_NAME = "guard";
+        final String BITMAP_NAME = "gingerbreadman";
         final float HEIGHT = 2;
         final float WIDTH = 1;
 
@@ -25,7 +25,7 @@ public class Guard extends GameObject {
         setWidth(WIDTH);
         setType(type);
 
-        setBitmapName("guard");
+        setBitmapName("gingerbreadman");
         // Now for all the other stuoid shit that the game needs
         setMoves(true);
         setActive(true);
