@@ -23,13 +23,15 @@ public class LevelData {
     // 7 = Stone
 
     // Active Objects
-    // g = guard
+    // g = Gingerbread Soldiers
+    // b = Little Toast
+    // y = Yeast Bomb
     // d = drone
     // t = teleport
     // c = coin
     // u = upgrade
     // f = fire
-    // e = extra life
+    // e = extra health
 
     // Inactive Objects
     // x = tree

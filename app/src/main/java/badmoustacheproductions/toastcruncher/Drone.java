@@ -23,7 +23,7 @@ public class Drone extends GameObject{
 
         setType(type);
 
-        setBitmapName("drone");
+        setBitmapName("littletoast");
         setMoves(true);
         setActive(true);
         setVisible(true);
